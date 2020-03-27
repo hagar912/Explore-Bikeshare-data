@@ -72,7 +72,7 @@ chi$month[chi$month == "06"] <- 'June'
 
 
 # .. 1 .. #
-#Q(1) .. whoes user that rents the bike more during the months ?
+#Q(1) .. whose user that rents the bike more during the months ?
 ## from the plot ,Subscriber rents bike more than Customer and independent
 
 png(file = "rental_user.png")
@@ -96,8 +96,8 @@ dev.off()
 
 
 # .. 2 .. #
-#Q(2) .. whoes gender that rents the bike more during the months ?
-## from the plot ,Male rents bike more than female decresing during May but then incresing within June
+#Q(2) .. whose gender that rents the bike more during the months ?
+## from the plot ,Male rents bike more than female decreasing during May but then increasing within June
 
 png(file = "rental_gender.png")
 rental_gender <- function(data) {
@@ -119,7 +119,7 @@ dev.off()
 
 
 # .. 3 .. #
-#Q(3) .. whoes age stage that rents the bike more during the months ?
+#Q(3) .. whose age stage that rents the bike more during the months ?
 ## from the plot ,Adolescencence rents bike more than others and few changes between Adult and senior adult
 
 png(file = "rental_age_stage.png")
@@ -190,7 +190,7 @@ dev.off()
 
 # .. 6 .. #
 # Q(6).. which Hour for each month has increasing with bike sharing ?
-## from the plot , we considered that ,The most month for rental the bike was last month 'June' as we on the right way  ##
+## from the plot,The most month for rental the bike was last month 'June' as we on the right way  ##
 
 #plotting
 png(file = "hours_per_month.png")
@@ -213,7 +213,7 @@ dev.off()
 
 # .. 7 .. #
 #Q(7) .. Comparing Between males and females (take care of missing values) during the trip duration
-## from the plot , we considered that , Female's trip duration was longer that Males.
+## from the plot , Female's trip duration was longer that Males.
 
 # plotting
 png(file = "gender_t.duration.png")
