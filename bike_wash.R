@@ -51,7 +51,7 @@ wash$month[wash$month == "06"] <- 'June'
 
 
 # .. 1 .. #
-#Q(1) .. whoes user that rents the bike more during the months ?
+#Q(1) .. whose user that rents the bike more during the months ?
 ## from the plot ,Subscriber rents bike more than Customer and it is clearly show that there is a growth in the rental during last month June.
 
 png(file = "rental_user.png")
@@ -75,8 +75,8 @@ dev.off()
 
 
 # .. 2 .. #
-#Q(2) .. Comparing the growth of the usage with full time for the trip between thefirst and last months !
-## from the plot , There is a growth for the usage of the bike during months as : from first month (January was 579.64 and the big change was in June760.9 .
+#Q(2) .. Comparing the growth of the usage with full time for the trip between the first and last months !
+## from the plot , There is a growth for the usage of the bike during months as : from first month (January was 579.64 and the big change was in June 760.9) .
 
 png(file = "Trip duration  months.png")
 growth_months <- function(data) {
@@ -121,7 +121,7 @@ dev.off()
 
 # .. 4 .. #
 # Q(4).. which Hour for each month has increasing with bike sharing ?
-## from the plot , we considered that ,The hour during first 3 months is 6 PM||April,May was 5 AM||June was 8 AM ##
+## from the plot ,The hour during first 3 months is 6 PM||April,May was 5 AM||June was 8 AM ##
 
 #plotting
 png(file = "hours_per_month.png")
