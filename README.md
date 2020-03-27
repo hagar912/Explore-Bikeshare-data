@@ -19,10 +19,12 @@ Randomly selected data for the first six months of 2017 are provided for all thr
 * Start Station (e.g., Broadway & Barry Ave)
 * End Station (e.g., Sedgwick St & North Ave)
 * User Type (Subscriber or Customer)
+>
 ` The Chicago and New York City files also have the following two columns: `
 * Gender
 * Birth Year
-####### The Dataset Files :
+
+### The Dataset Files :
 * [`chicago`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/chicago.zip)
 * [`new_york_city`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/new_york_city.zip)
 * [`washington`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/washington.zip)
