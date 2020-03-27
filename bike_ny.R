@@ -72,7 +72,7 @@ ny$month[ny$month == "06"] <- 'June'
 
 
 # .. 1 .. #
-#Q(1) .. whoes user that rents the bike more during the months ?
+#Q(1) .. whose user that rents the bike more during the months ?
 ## from the plot ,Subscriber rents bike more than Customer and independent decreased during March and April but then increased during last month June
 
 png(file = "rental_user.png")
@@ -96,7 +96,7 @@ dev.off()
 
 
 # .. 2 .. #
-#Q(2) .. whoes gender that rents the bike more during the months ?
+#Q(2) .. whose gender that rents the bike more during the months ?
 ## from the plot ,Male rents bike more than female During all months.
 
 png(file = "rental_gender.png")
@@ -119,8 +119,11 @@ dev.off()
 
 
 # .. 3 .. #
-#Q(3) .. whoes age stage that rents the bike more during the months ?
-## from the plot ,Senior adults rents bike more than others and few changes between Adult and Adolescences
+#Q(3) .. whose age stage that rents the bike more during the months ?
+## from the plot , Senior adults rents bike more than others and few changes between Adult and Adolescents but Adult transcendence than Adolescents 
+
+
+
 
 png(file = "rental_age_stage.png")
 rental_age_stage <- function(data) {
@@ -146,7 +149,7 @@ dev.off()
 
 # .. 4 .. #
 #Q(4) .. Comparing the growth of the usage with full time for the trip between the months !
-## from the plot , we considered that , There is a growth for the usage of the bike during months as : During April the median was 646.0 and in may was 645 and then there is a growth in June as it was 660
+## from the plot ,There is a growth for the usage of the bike during months as : During April the median was 646.0 and in may was 645 and then there is a growth in June as it was 660
 
 png(file = "Trip duration over Last 3 months.png")
 growth_months <- function(data) {
@@ -168,7 +171,7 @@ by(ny$Trip.Duration, ny$month, summary)
 
 # .. 5 .. #
 # Q(5) .. which Hour does it has most used of the bike riding ?
-## from the plot , we considered that ,The most used hour for bicycle borrowing was at 5 pm, followed by 4 pm and then from the plotting ##
+## from the plot ,The most used hour for bicycle borrowing was at 5 pm, followed by 4 pm and then from the plotting ##
 
 #plotting
 ? qplot
@@ -190,7 +193,7 @@ dev.off()
 
 # .. 6 .. #
 # Q(6).. which Hour for each month has increasing with bike sharing ?
-## from the plot , we considered that ,The most used hour for each month bicycle borrowing was at 5 pm, followed by 6 pm ##
+## from the plot ,The most used hour for each month bicycle borrowing was at 5 pm, followed by 6 pm ##
 
 #plotting
 png(file = "hours_per_month.png")
@@ -213,7 +216,7 @@ dev.off()
 
 # .. 7 .. #
 #Q(7) .. Comparing Between males and females (take care of missing values) during the trip duration
-## from the plot , we considered that , Female's trip duration was longer that Males.
+## from the plot ,Female's trip duration was longer that Males.
 
 # plotting
 png(file = "gender_t.duration.png")
