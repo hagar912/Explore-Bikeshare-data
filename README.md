@@ -24,13 +24,26 @@ Randomly selected data for the first six months of 2017 are provided for all thr
 * Gender
 * Birth Year
 
+ ### What Software Do You Need?
+ For working on your local machine, you will need to install R.
+
 ### The Dataset Files :
 * [`chicago`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/chicago.zip)
 * [`new_york_city`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/new_york_city.zip)
 * [`washington`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/washington.zip)
 
+### Analysis Graphs with Description
+* [`Chicago presentation`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/chi_pres.pdf)
+* [`new_york_city`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/ni_presen.pdf)
+* [`washington`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/wash_pres.pdf)
 
- ### What Software Do You Need?
- For working on your local machine, you will need to install R.
- 
+### Analysis coding provided here :
+* [`Chicago presentation`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/bike_chi.R)
+* [`new_york_city`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/bike_ny.R)
+* [`washington`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/bike_wash.R)
+
+
+
+
+
  
