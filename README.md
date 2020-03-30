@@ -28,19 +28,16 @@ Randomly selected data for the first six months of 2017 are provided for all thr
  For working on your local machine, you will need to install R.
 
 ### The Dataset Files :
-* [`chicago`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/chicago.zip)
-* [`new_york_city`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/new_york_city.zip)
-* [`washington`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/washington.zip)
+* [`chicago`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/dataset.zip)
+* [`new_york_city`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/dataset.zip)
+* [`washington`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/dataset.zip)
 
 ### Analysis Graphs with Description
-* [`Chicago presentation`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/chi_pres.pdf)
-* [`new_york_city Presentation`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/ni_presen.pdf)
-* [`washington Presentation`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/wash_pres.pdf)
+* [`bike_sahring_presentation`]https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/bike_sahring_presentation.pdf)
+
 
 ### Analysis coding provided here :
-* [`Chicago R Coding`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/bike_chi.R)
-* [`new_R Coding`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/bike_ny.R)
-* [`washington R Coding`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/bike_wash.R)
+* [`bike_sharing analysis R Code`](https://github.com/hagar912/Explore-Bikeshare-Data---R/blob/master/bike_sharing.R)
 
 
 
