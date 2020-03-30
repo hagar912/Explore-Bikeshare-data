@@ -154,7 +154,10 @@ wash$month[wash$month %in% old] <-
 
 # .. 1 .. #
 #Q(1) .. whose user that rents the bike more during the months ?
-png(file = "rental_user.png")
+png(file = "rental_user_chi.png")
+png(file = "rental_user_ny.png")
+png(file = "rental_user_wash.png")
+
 rental_user <- function(data,title) {
     ggplot(data = data,
            aes(x = User.Type)) +
@@ -180,7 +183,7 @@ rental_user(subset(ny,!is.na(User.Type)),title ="Rental Count compresion for New
 table(ny$User.Type)
 
 ## for wash df,Subscriber rents bike more than Customer and it is clearly show that there is a growth in the rental during last month June.
-rental_user(wash,title="Rental Count compresion for washington User Types")
+rental_user(wash,title="washington ~ Rental Count compresion for User Types")
 table(wash$User.Type)
 
 dev.off()
@@ -189,7 +192,7 @@ dev.off()
 # .. 2 .. #
 #Q(2) .. whoes gender that rents the bike more during the months ?
 
-png(file = "rental_gender.png")
+png(file = "rental_gender_chi.png")
 rental_gender <- function(data,title) {
     ggplot(data,
            aes(x = Gender,
@@ -209,7 +212,7 @@ rental_gender(subset(chi, !is.na(Gender)),title="Rental Count compresion for Chi
 table(chi$Gender)
 
 ## for ny dataset ,Male rents bike more than female During all months.
-rental_gender(subset(ny, !is.na(Gender)),title="Rental Count compresion for New York Gender")
+rental_gender(subset(ny, !is.na(Gender)),title="New York ~ Rental Count compresion for Gender")
 table(ny$Gender)
 
 dev.off()
@@ -218,7 +221,7 @@ dev.off()
 # .. 3 .. #
 #Q(3) .. whose age stage that rents the bike more during the months ?
 
-png(file = "rental_age_stage.png")
+png(file = "rental_age_stage_ny.png")
 rental_age_stage <- function(data,title) {
     ggplot(data,
            aes(x = Age.Class,
@@ -230,7 +233,7 @@ rental_age_stage <- function(data,title) {
              x = 'Age Stage Classfication',
              y = 'Rental Count') +
         facet_wrap( ~ data$month) +
-        theme (legend.position = "bottom") +
+        theme (legend.position = "Bottom")+
         scale_fill_discrete(name = "Method of Filing rental_age_stage")
 }
 ## for chi dataset ,Adolescencence rents bike more than others and few changes between Adult and senior adult
@@ -238,7 +241,7 @@ rental_age_stage(subset(chi, !is.na(Age.Class)),title="Rental Count compresion f
 table(chi$Age.Class)
 
 ## for ny dataset ,Senior adults rents bike more than others and few changes between Adult and Adolescences
-rental_age_stage(subset(ny, !is.na(Age.Class)),title="Rental Count compresion for New York Age Stage")
+rental_age_stage(subset(ny, !is.na(Age.Class)),title="New York ~ Rental Count compresion for Age Stage")
 table(ny$Age.Class)
 
 dev.off()
@@ -253,7 +256,7 @@ dev.off()
 # .. 4 .. #
 #Q(4) .. Comparing the growth of the usage with full time for the trip between the months !
 
-png(file = "Trip duration over Last 3 months.png")
+png(file = "Trip duration over Last 3 months_chi.png")
 growth_months <- function(data,title) {
     ggplot(data,
            aes(x = month,
@@ -272,7 +275,7 @@ table(chi$month)
 by(chi$Trip.Duration, chi$month, summary)
 
 ## for ny df, There is a growth for the usage of the bike during months as : During April the median was 646.0 and in may was 645 and then there is a growth in June as it was 660
-growth_months(data = subset(ny, month == c('June', 'May' , 'April')),title = "New York trip duration over Last 3 months")
+growth_months(data = subset(ny, month == c('June', 'May' , 'April')),title = "New York ~ trip duration over Last 3 months")
 table(ny$month)
 by(ny$Trip.Duration, ny$month, summary)
 
@@ -290,7 +293,7 @@ dev.off()
 
 #plotting
 ? qplot
-png(file = "Most_usd_hour.png")
+png(file = "Most_usd_hour_chi.png")
 hours_ride <- function(data,title) {
     qplot(
         x = data$hour,
@@ -307,11 +310,11 @@ hours_ride(data = chi,title="The most used Chicago's hour for sharing bike")
 table(chi$hour)
 
 ## for ny dataset ,The most used hour for bicycle borrowing was at 5 pm, followed by 4 pm and then from the plotting ##
-hours_ride(data = ny,title="The most used New York's hour for sharing bike")
+hours_ride(data = ny,title="New York ~ The most used hour for sharing bike")
 table(ny$hour)
 
 ## from the plot ,The most used hour for bicycle borrowing was at 8 AM, followed by 7 AM and then .. ##
-hours_ride(data = wash,title="The most used Washington's hour for sharing bike")
+hours_ride(data = wash,title="Washington ~ The most used hour for sharing bike")
 table(wash$hour)
 
 dev.off()
@@ -321,7 +324,7 @@ dev.off()
 # Q(6).. which Hour for each month has increasing with bike sharing ?
 
 #plotting
-png(file = "hours_per_month.png")
+png(file = "hours_per_month_chi.png")
 hours_per_month <- function(data,title) {
     qplot(
         x = data$hour,
@@ -339,11 +342,12 @@ hours_per_month <- function(data,title) {
 hours_per_month(data = chi,title="The most used hour per months for Chicago")
 table(chi$hour)
 ## for ny dataset ,The most used hour for each month bicycle borrowing was at june at 5 pm, followed by 6 pm ##
-hours_per_month(data = ny,title="The most used hour per months for New York")
+hours_per_month(data = ny,title="New York ~ The most used hour per months for New York")
 table(ny$hour)
+
 dev.off()
 ## for wash ,The hour during first 3 months is 6 PM||April,May was 5 AM||June was 8 AM ##
-hours_per_month(data = wash,title="The most used hour per months for Washington ")
+hours_per_month(data = wash,title="Washington ~ The most used hour per months ")
 table(wash$hour)
 dev.off()
 
@@ -352,7 +356,7 @@ dev.off()
 #Q(7) .. Comparing Between males and females (take care of missing values) during the trip duration
 
 # plotting
-png(file = "gender_t.duration.png")
+png(file = "gender_t.duration_chi.png")
 duration_gender <- function(data,title) {
     ggplot(data,
            aes(x = Gender,
@@ -371,7 +375,7 @@ table(chi$Gender)
 by(chi$Trip.Duration, chi$Gender, summary)
 
 ## For ny dataset ,Female's trip duration was longer that Males.
-duration_gender(subset(ny,!is.na(Gender)),title = "New York's Gender vs Trip duration")
+duration_gender(subset(ny,!is.na(Gender)),title = "New York ~ Gender vs Trip duration")
 table(ny$Gender)
 by(ny$Trip.Duration, ny$Gender, summary)
 
